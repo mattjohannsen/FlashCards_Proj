@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 
 import StackList from './Components/StackList';
+import StackInput from './Components/StackInput';
 
 function App() {
   return (
@@ -16,10 +17,14 @@ function App() {
           <tr>
             <th>Select a stack of flash cards to begin:</th>
           </tr>
+          <tr>
+            <th>Current Stack: ||</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
             <td>
+              <StackInput/>
               <StackList/>
             </td>
           </tr>

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default class StackList extends React.Component {
     state =     {
-        stacks: [],
+        stacks: []
     }
     componentDidMount(){
         axios.get('https://localhost:44393/api/collection').then(res => {
