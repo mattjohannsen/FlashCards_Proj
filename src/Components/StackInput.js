@@ -17,9 +17,8 @@ export default class StackInput extends React.Component {
         title: this.state.title
       };
 
-      const jsonstack = JSON.stringify(stack);
       console.log(jsonstack);
-      axios.post('https://localhost:44393/api/stack', jsonstack, {headers: {'Content-Type': 'application/json',}})
+      axios.post('https://localhost:44393/api/stack', JSON.stringify(stack), {headers: {'Content-Type': 'application/json',}})
         .then(res => {
           console.log(res);
           console.log(res.data);
