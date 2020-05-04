@@ -9,10 +9,23 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-        <CollectionList/>
+        Flash Card Library
         </p>
-
       </header>
+      <table class="center">
+        <thead>
+          <tr>
+            <th>Select a collection to begin:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <CollectionList/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
