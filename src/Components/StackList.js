@@ -1,18 +1,18 @@
 import React from 'react';
 import axios from 'axios';
 
-export default class CollectionList extends React.Component {
+export default class StackList extends React.Component {
     state =     {
-        collections: []
+        stacks: [],
     }
     componentDidMount(){
         axios.get('https://localhost:44393/api/collection').then(res => {
             console.log(res);
-            this.setState({ collections: res.data});
+            this.setState({ stacks: res.data});
         });
     }
 
     render(){
-        return <ul>{this.state.collections.map(collection => <li>{collection.title}</li>)}</ul>;
+        return <ul>{this.state.stacks.map(stack => <li key={stack.id}>{stack.title}</li>)}</ul>;
     }
 }

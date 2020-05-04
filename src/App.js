@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import CollectionList from './Components/CollectionList';
+import StackList from './Components/StackList';
 
 function App() {
   return (
@@ -12,16 +11,16 @@ function App() {
         Flash Card Library
         </h1>
       </header>
-      <table class="table table-info">
+      <table className="table table-info">
         <thead>
           <tr>
-            <th>Select a collection to begin:</th>
+            <th>Select a stack of flash cards to begin:</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <CollectionList/>
+              <StackList/>
             </td>
           </tr>
         </tbody>
