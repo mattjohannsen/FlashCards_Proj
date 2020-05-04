@@ -3,7 +3,6 @@ import axios from 'axios';
 
 export default class StackInput extends React.Component {
     state = {
-      id: 0,
       title: ''
     };
 
@@ -15,18 +14,12 @@ export default class StackInput extends React.Component {
       event.preventDefault();
 
       const stack = {
-        id: 0,
         title: this.state.title
       };
 
       const jsonstack = JSON.stringify(stack);
       console.log(jsonstack);
-      axios.post('https://localhost:44393/api/stack', jsonstack, {
-        headers: {
-            'Content-Type': 'application/json',
-        }
-      }
-      )
+      axios.post('https://localhost:44393/api/stack', jsonstack, {headers: {'Content-Type': 'application/json',}})
         .then(res => {
           console.log(res);
           console.log(res.data);
