@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <h1>
         Flash Card Library
-        </p>
+        </h1>
       </header>
-      <table class="center">
+      <table class="table table-info">
         <thead>
           <tr>
             <th>Select a collection to begin:</th>
