@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 import './App.css';
 
 import StackList from './Components/StackList';
@@ -8,13 +9,13 @@ import FlashcardList from './Components/FlashcardList';
 function App() {
   const [flashcards, setFlashcards] = useState(MattsTestCards);
   return (
-    <div className="App">
+    <div className=" table table-danger">
       <header className="App-header">
         <h1>
         Flash Card Library
         </h1>
       </header>
-      <table className="table table-danger center">
+      <table className="center">
         <thead>
           <tr>
             <th>Select a stack of flash cards to begin:</th>
@@ -57,5 +58,6 @@ const MattsTestCards = [
     "definition":"Reusable building blocks for UI using JSX"
   }
 ]
+
 
 export default App;
