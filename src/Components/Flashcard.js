@@ -6,16 +6,16 @@ export default function Flashcard({ flashcard }) {
 
     return (
         <div 
-          className={`card ${flip ? 'flip' : ''}`}
+          className="card"
           onClick={() => setFlip(!flip)}
         >
-          <div className="front">
+{/*           <div className="front">
             {flashcard.definition}
           </div>
           <div className="back">
             {flashcard.word}
-          </div>          
-            {flip ? flashcard.definition : flashcard.word}
+          </div>     */}      
+            {flip ? flashcard.word : flashcard.definition}
         </div>
     )
 }

@@ -41,3 +41,24 @@ table.center {
   margin-left:auto; 
   margin-right:auto;
 }
+body {
+ background-color: #c8d0d2;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: .25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  height: 150px;
+  width: 300px;
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}

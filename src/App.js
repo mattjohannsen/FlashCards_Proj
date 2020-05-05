@@ -4,7 +4,6 @@ import './App.css';
 import StackList from './Components/StackList';
 import StackInput from './Components/StackInput';
 import FlashcardList from './Components/FlashcardList';
-import Flashcard from './Components/Flashcard';
 
 function App() {
   const [flashcards, setFlashcards] = useState(MattsTestCards);
@@ -15,7 +14,7 @@ function App() {
         Flash Card Library
         </h1>
       </header>
-      <table className="table table-info">
+      <table className="table table-danger center">
         <thead>
           <tr>
             <th>Select a stack of flash cards to begin:</th>
