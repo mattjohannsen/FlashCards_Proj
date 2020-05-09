@@ -6,15 +6,16 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const [flashcards, setFlashcards] = useState(MattsTestCards);
+  const [flashcards, setFlashcards] = useState([]);
   const currentStack = 1;
+  // const testarray = [];
 
   useEffect(() => {
     axios
       .get('https://localhost:44393/api/collection')
       .then(res => {
-
-      console.log(res.data)
+        setFlashcards(res.data.filter(item=> item.id === currentStack).map(m=>m))
+        console.log(res.data)
       })
   }, [])
 
@@ -32,7 +33,7 @@ function App() {
               <StackList />
       </div>
       <div>
-              <FlashcardList flashcards={flashcards} />
+              <FlashcardList flashcards={MattsTestCards} />
       </div>
     </div>
   );
